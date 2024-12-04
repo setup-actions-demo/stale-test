@@ -6,8 +6,7 @@
 name: Issue1156
 
 on:
-  schedule:
-  - cron: '8 17 * * *'
+  workflow_dispatch:
 
 jobs:
   stale:
