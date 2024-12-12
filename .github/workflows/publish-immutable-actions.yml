@@ -25,6 +25,7 @@ jobs:
         # exempt-issue-labels: ehancement,good first issue
         #exempt-issue-labels: '!stale'
         days-before-issue-stale: 1
+        days-before-pr-stale: 1
         stale-issue-message: >
             This issue has been automatically marked as stale because it has not had
             any activity in the last 60 days. It will be closed in 7 days if no further
