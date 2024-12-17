@@ -3,7 +3,7 @@
 # You can adjust the behavior by modifying this file.
 # For more information, see:
 # https://github.com/actions/stale
-name: 'Actions Core 1_11_1'
+name: 'Publish Immutable Action'
 
 on:
   workflow_dispatch:
@@ -17,7 +17,7 @@ jobs:
       pull-requests: write
 
     steps:
-    - uses: actions/stale@dependabot/npm_and_yarn/actions/core-1.11.1
+    - uses: actions/stale@dependabot/github_actions/actions/publish-immutable-action-0.0.4
       with:
         # This might not be required?
         # repo-token: ${{ secrets.GITHUB_TOKEN }}
@@ -26,11 +26,10 @@ jobs:
         #exempt-issue-labels: '!stale'
         days-before-issue-stale: 1
         days-before-pr-stale: 1
-        stale-issue-label: "Stale by PR test"
         stale-issue-message: >
             This issue has been automatically marked as stale because it has not had
             any activity in the last 60 days. It will be closed in 7 days if no further
             activity occurs. Please feel free to leave a comment if you believe the issue
             is still relevant.
-        # close-issue-message: >
-        #     This issue has been automatically closed due to inactivity.
+        close-issue-message: >
+            This issue has been automatically closed due to inactivity.
