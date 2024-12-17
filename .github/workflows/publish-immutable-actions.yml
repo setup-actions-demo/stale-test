@@ -17,7 +17,7 @@ jobs:
       pull-requests: write
 
     steps:
-    - uses: actions/stale@dependabot/github_actions/actions/publish-immutable-action-0.0.4
+    - uses: actions/stale@dependabot/npm_and_yarn/actions/core-1.11.1
       with:
         # This might not be required?
         # repo-token: ${{ secrets.GITHUB_TOKEN }}
@@ -31,5 +31,5 @@ jobs:
             any activity in the last 60 days. It will be closed in 7 days if no further
             activity occurs. Please feel free to leave a comment if you believe the issue
             is still relevant.
-        close-issue-message: >
-            This issue has been automatically closed due to inactivity.
+        # close-issue-message: >
+        #     This issue has been automatically closed due to inactivity.
