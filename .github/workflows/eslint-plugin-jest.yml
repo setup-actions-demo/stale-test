@@ -33,5 +33,10 @@ jobs:
             any activity in the last 60 days. It will be closed in 7 days if no further
             activity occurs. Please feel free to leave a comment if you believe the issue
             is still relevant.
+        stale-pr-message: >
+            This PR has been automatically marked as stale because it has not had
+            any activity in the last 60 days. It will be closed in 7 days if no further
+            activity occurs. Please feel free to leave a comment if you believe the issue
+            is still relevant.
         # close-issue-message: >
         #     This issue has been automatically closed due to inactivity.
