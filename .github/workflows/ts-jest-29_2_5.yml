@@ -17,7 +17,7 @@ jobs:
       pull-requests: write
 
     steps:
-    - uses: actions/stale@dependabot/npm_and_yarn/ts-jest-29.2.5
+    - uses: actions/stale@dependabot/npm_and_yarn/types/jest-29.5.14
       with:
         # This might not be required?
         # repo-token: ${{ secrets.GITHUB_TOKEN }}
