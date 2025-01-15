@@ -3,7 +3,7 @@
 # You can adjust the behavior by modifying this file.
 # For more information, see:
 # https://github.com/actions/stale
-name: 'ts-jest-29.2.5'
+name: 'ts-jest-29.4.15'
 
 on:
   workflow_dispatch:
