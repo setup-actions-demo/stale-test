@@ -4,7 +4,7 @@
 # You can adjust the behavior by modifying this file.
 # For more information, see:
 # https://github.com/actions/stale
-name: 'ts-jest-29.5.14'
+name: 'ts-jest-29_5_14'
 
 on:
   workflow_dispatch:
