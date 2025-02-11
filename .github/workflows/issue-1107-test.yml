@@ -1,4 +1,4 @@
-name: Close Stale Issues
+name: Close Stale Issues 1107
 on:
   # schedule:
   # - cron: "0 7 * * *"
