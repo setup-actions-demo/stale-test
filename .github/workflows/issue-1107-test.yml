@@ -28,4 +28,4 @@ jobs:
         days-before-issue-close: 1
         close-issue-message: "This issue is now closed due to there being no activity on it for the past 1 days since being marked as 1."
         operations-per-run: 500
-        close-issue-reason: 
+        close-issue-reason: completed
