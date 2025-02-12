@@ -25,7 +25,7 @@ jobs:
         days-before-pr-close: -1
         days-before-stale: 1
         stale-issue-message: "This issue is now marked as 1 day old due to there being no activity on it for the past 1 days and being labelled 1. Unless the 1 label is removed or the issue is commented on, this will be closed in1 days. If you would like to make this issue exempt from getting stale, please remove the 1 and 1 labels or add the 1 label"
-        days-before-close: 1
+        days-before-issue-close: 1
         close-issue-message: "This issue is now closed due to there being no activity on it for the past 1 days since being marked as 1."
         operations-per-run: 500
         close-issue-reason: 
