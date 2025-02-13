@@ -11,7 +11,7 @@ jobs:
       pull-requests: write
     env:
       stale-days: 1
-      close-days: 1
+      close-days: 0
       stale-label: stale 1107
       stale-exempt-label: stale-exempt
       only-label: Stale 1107
