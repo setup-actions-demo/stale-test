@@ -1,4 +1,4 @@
-name: "Stale issue handler"
+name: "Stale issue 1165"
 
 on:
   workflow_dispatch:
