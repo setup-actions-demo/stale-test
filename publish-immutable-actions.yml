@@ -17,7 +17,7 @@ jobs:
       pull-requests: write
 
     steps:
-    - uses: actions/stale@dependabot/github_actions/actions/publish-immutable-action-0.0.4
+    - uses: actions/stale@ericLemanissier:undici
       with:
         # This might not be required?
         # repo-token: ${{ secrets.GITHUB_TOKEN }}
