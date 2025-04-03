@@ -18,13 +18,13 @@ jobs:
     steps:
       - uses: actions/stale@v9
         with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        operations-per-run: 100 # This should be temporary.
-        days-before-issue-stale: 70
-        stale-issue-message: >
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          operations-per-run: 100 # This should be temporary.
+          days-before-issue-stale: 70
+          stale-issue-message: >
             This issue has been automatically marked as stale because it has not had
             any activity in the last 60 days. It will be closed in 7 days if no further
             activity occurs. Please feel free to leave a comment if you believe the issue
             is still relevant.
-        close-issue-message: >
+          close-issue-message: >
             This issue has been automatically closed due to inactivity.
