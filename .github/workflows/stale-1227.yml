@@ -1,4 +1,4 @@
-name: Issue 1227 BBQ beats
+name: Issue 1227
 
 on:
   workflow_dispatch:
