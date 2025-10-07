@@ -21,4 +21,4 @@ jobs:
           stale-pr-message: 'This pull request is stale because it has been open for 30 days with no activity.'
           days-before-stale: 100
           days-before-close: 10
-          only-issue-types: 'bug'
+          only-issue-types: 'bug,feature'
