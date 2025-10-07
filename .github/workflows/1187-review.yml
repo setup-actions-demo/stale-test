@@ -1,0 +1,24 @@
+name: Test 1187 for review
+
+on:
+  # schedule:
+  #   - cron: '0 0 * * *'  # Runs every day at midnight UTC
+  workflow_dispatch:      # Allows manual triggering
+  
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: Bibo-Joshi/stale@main
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          stale-issue-message: 'This issue is stale because it has been open for 30 days with no activity.'
+          stale-pr-message: 'This pull request is stale because it has been open for 30 days with no activity.'
+          days-before-stale: 100
+          days-before-close: 10
+          only-issue-types: 'bug'
