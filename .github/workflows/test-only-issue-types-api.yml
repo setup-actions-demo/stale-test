@@ -1,0 +1,35 @@
+name: Test Only-Issue-Types Filtering From API
+
+on:
+  workflow_dispatch:      # Allows manual triggering
+  
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: ⏱ Start timer
+        id: start
+        run: echo "start_time=$(date +%s)" >> $GITHUB_ENV
+
+      - uses: chiranjib-swain/stale@feature/issue_1187
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          stale-issue-message: 'This issue is stale because it has been open for 30 days with no activity.'
+          stale-pr-message: 'This pull request is stale because it has been open for 30 days with no activity.'
+          days-before-stale: 150
+          days-before-close: 10
+          only-issue-types: 'bug'
+
+      - name: ⏱ End timer and show duration
+        run: |
+          end_time=$(date +%s)
+          duration=$((end_time - ${{ env.start_time }}))
+          echo "✅ Workflow completed in $duration seconds."
