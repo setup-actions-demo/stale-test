@@ -22,6 +22,7 @@ jobs:
       - uses: chiranjib-swain/stale@feature/issue_1187
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+          operations-per-run: 60
           stale-issue-message: 'This issue is stale because it has been open for 30 days with no activity.'
           stale-pr-message: 'This pull request is stale because it has been open for 30 days with no activity.'
           days-before-stale: 150
