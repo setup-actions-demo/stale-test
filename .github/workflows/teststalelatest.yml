@@ -1,0 +1,36 @@
+name: Test Latest stale
+
+on:
+  workflow_dispatch:      # Allows manual triggering
+  
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: ⏱ Start timer
+        id: start
+        run: echo "start_time=$(date +%s)" >> $GITHUB_ENV
+
+      - uses: actions/stale@v10
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          operations-per-run: 60
+          stale-issue-message: 'This issue is stale because it has been open for 30 days with no activity.'
+          stale-pr-message: 'This pull request is stale because it has been open for 30 days with no activity.'
+          days-before-stale: 150
+          days-before-close: 10
+          only-issue-types: 'bug,feature'
+
+      - name: ⏱ End timer and show duration
+        run: |
+          end_time=$(date +%s)
+          duration=$((end_time - ${{ env.start_time }}))
+          echo "✅ Workflow completed in $duration seconds."
