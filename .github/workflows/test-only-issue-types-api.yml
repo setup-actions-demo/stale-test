@@ -19,7 +19,7 @@ jobs:
         id: start
         run: echo "start_time=$(date +%s)" >> $GITHUB_ENV
 
-      - uses: chiranjib-swain/stale@feature/issue_1187
+      - uses: chiranjib-swain/stale@fix/missing-only-issue-types-config
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           operations-per-run: 60
