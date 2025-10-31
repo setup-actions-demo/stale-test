@@ -19,7 +19,7 @@ jobs:
         id: start
         run: echo "start_time=$(date +%s)" >> $GITHUB_ENV
 
-      - uses: actions/stale@v10
+      - uses:  Bibo-Joshi/stale@fix-only-issue-types 
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           operations-per-run: 60
